@@ -639,6 +639,8 @@ with pkgs;
 
   ec2_ami_tools = callPackage ../tools/virtualization/ec2-ami-tools { };
 
+  nvidia_container_runtime_hook = callPackage ../tools/virtualization/nvidia-container-runtime-hook { };
+
   altermime = callPackage ../tools/networking/altermime {};
 
   amule = callPackage ../tools/networking/p2p/amule { };
@@ -1497,6 +1499,8 @@ with pkgs;
 
   libndtypes = callPackage ../development/libraries/libndtypes { };
 
+  libnvidia-container = callPackage ../development/libraries/libnvidia-container { };
+
   libxnd = callPackage ../development/libraries/libxnd { };
 
   link-grammar = callPackage ../tools/text/link-grammar { };
@@ -1510,6 +1514,8 @@ with pkgs;
   iio-sensor-proxy = callPackage ../os-specific/linux/iio-sensor-proxy { };
 
   ipvsadm = callPackage ../os-specific/linux/ipvsadm { };
+
+  nvidia-modprobe = callPackage ../os-specific/linux/nvidia-modprobe { };
 
   lynis = callPackage ../tools/security/lynis { };
 
@@ -18900,6 +18906,8 @@ with pkgs;
   rubyripper = callPackage ../applications/audio/rubyripper {};
 
   runc = callPackage ../applications/virtualization/runc {};
+
+  runc-nvidia = callPackage ../applications/virtualization/runc/nvidia.nix {};
 
   rxvt = callPackage ../applications/misc/rxvt { };
 
